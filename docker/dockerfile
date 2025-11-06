@@ -1,6 +1,6 @@
 FROM python:3.10.19
 
-RUN pip install --no-cache-dir fastapi uvicorn pillow onnxruntime
+RUN pip install --no-cache-dir fastapi uvicorn pillow onnx onnxruntime
 # Install ultralytics last - it will detect opencv-python-headless and not reinstall opencv-python
 RUN pip install --no-cache-dir ultralytics
 # remove the opencv-python if it was installed
